@@ -54,7 +54,7 @@ const resetFormResponse = () => {
 export const fetchResponse = () => {
 	return (dispatch, getState) => new Promise((resolve,reject) => {
         dispatch(resetFormResponse())
-		axios.get(`http://fiveloop.snco.co/api/success.json`)
+		axios.get(`https://fiveloop.snco.co/api/success.json`)
 		.then((response) => {
 			dispatch(fetchResponseSuccess(response.data))
             resolve()
